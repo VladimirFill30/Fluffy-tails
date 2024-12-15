@@ -37,7 +37,7 @@ body {
 }
 
 /* При наведении на карточку - меняем цвет тени */
-.card:hover {
+.card:focus {
     box-shadow: 4px 8px 16px rgba(255, 102, 51, 0.2);
 }
 
@@ -68,7 +68,7 @@ body {
 }
 
 /* При наведении - увеличиваем картинку */
-.card__image:hover>img {
+.card__image:focus>img {
     transform: scale(1.1);
 }
 
@@ -120,7 +120,7 @@ p {
     /* Прижимаем кнопку к низу карточки */
 }
 
-.card__add:hover {
+.card__add:focus {
     border: 1px solid #ff6633;
     background-color: #ff6633;
     color: #fff;
@@ -216,7 +216,7 @@ header {
     line-height: 40px;
 }
 
-.menu a:hover {
+.menu a:focus {
     color: #ef5a42;
 }
 
