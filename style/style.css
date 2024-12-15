@@ -97,7 +97,7 @@ header {
     line-height: 40px;
 }
 
-.menu a:focus {
+.menu a:hover {
     color: #ef5a42;
 }
 
