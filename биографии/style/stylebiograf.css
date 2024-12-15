@@ -1,0 +1,230 @@
+*,
+*:after,
+*:before {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+ul {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    outline: none;
+}
+
+body {
+    font-family: 'Open Sans', arial, sans-serif;
+    font-size: 14px;
+    line-height: 1;
+    color: rgb(222, 222, 222);
+    background: rgb(14, 13, 13);
+}
+
+/* Очистка потока */
+header:after,
+
+footer:after,
+.container:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+/* стилевой класс который управляет шириной сетки */
+.container {
+    position: relative;
+    margin: 0 auto;
+    width: 100%;
+    max-width: 960px;
+    padding: 0 15px;
+
+}
+
+/* Стили шапки сайта */
+header {
+    position: relative;
+    width: 100%;
+    background: rgb(9, 9, 9);
+    box-shadow: 3px 3px 1px rgba(248, 241, 241, 0.05);
+    padding: 15px 0;
+    margin-bottom: 10px;
+}
+
+/* Логотип*/
+.logo {
+    display: block;
+    float: left;
+}
+
+.logo span {
+    background: black;
+    color: white;
+    display: inline-block;
+    width: 100px;
+    height: 60px;
+    line-height: 30px;
+    border-radius: 50%;
+    text-align: center;
+    margin: 5px 0;
+    text-shadow: 2px 2px 1px rgba(0, 0, 0, .05);
+}
+
+.logo span:nth-child(odd) {
+    background: #ef5a42;
+}
+
+/* Меню */
+.menu {
+    float: right;
+    padding-left: 70px;
+    bottom: 80px;
+}
+
+.menu li {
+    display: inline-block;
+    margin: 10px;
+    
+}
+
+.menu a {
+    display: block;
+    color: rgb(138, 137, 137);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: 600;
+    line-height: 40px;
+}
+
+.menu a:hover {
+    color: #ef5a42;
+}
+
+.menu li:last-child {
+    margin: 0;
+}
+
+.content {
+    margin-bottom: 30px;
+    margin-top: 20px;
+    width: 64%;
+    float: left;
+}
+
+.img>img {
+    position: relative;
+    text-align: center;
+    border-radius: 20px;
+}
+
+.post {
+    position: relative;
+    top: 10px;
+    margin-bottom: 35px;
+    line-height: 1.2;
+    font-size: 18px;
+}
+
+/* Стили подвала сайта */
+
+footer {
+    padding: 30px 0;
+    background: #000000;
+    color: white;
+}
+
+.footer-col {
+    width: 33.3333333333%;
+    float: left;
+}
+
+.footer-col a {
+    color: white;
+}
+
+.footer-col:last-child {
+    text-align: right;
+}
+
+.social-bar-wrap {
+    text-align: center;
+}
+
+.social-bar-wrap a {
+    padding: 0 7px;
+    font-size: 18px;
+}
+
+/* адаптация сайта */
+
+@media (max-width: 768px) {
+    header {
+        padding: 10px 0;
+    }
+
+    /* Делаем элементы  списка блочными чтобы они распологались друг под другом */
+    /* .menu li {
+        display: block;
+        text-align: center;
+        margin-bottom: 1px solid #ebebe3;
+    } */
+}
+
+
+@media (max-width: 480px) {
+
+    .logo {
+        float: none;
+        margin: 0 auto;
+        display: table;
+        padding-right: 25%;
+    }
+
+    .logo span {
+        margin: 0 2px;
+    }
+
+    .menu {
+        top: 118px;
+        float: left;
+    }
+
+    /* Делаем элементы  списка блочными чтобы они распологались друг под другом */
+    .menu li {
+        display: block;
+        position: relative;
+        text-align: center;
+        margin-bottom: 1px solid #ebebe3;
+    }
+
+    /* убираем верхнюю и нижнюю границы и выравниваем кнопку по центру */
+    .post-footer {
+        border-top: none;
+        border-bottom: none;
+        text-align: center;
+    }
+
+    /* Отменяем позиционирования кнопок соцсетей */
+    .post-social {
+        position: static;
+        text-align: center;
+        transform: none;
+        margin-top: 20px;
+    }
+
+    /* Отменяем обтекание подвала сайта */
+    .footer-col {
+        float: right;
+        margin-bottom: 20px;
+        width: 100%;
+        text-align: center;
+    }
+
+    .footer-col:last-child {
+        text-align: center;
+        margin-bottom: 0;
+    }
+
+}
